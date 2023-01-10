@@ -1,0 +1,40 @@
+<!-- Interpolacion -->
+<div class="container bg-teal-100  w-3/4 mx-auto mt-3 p-4">
+    <input type="text" id="valor" [(ngModel)]="valor" >
+    <!-- capturo el valor en el componente hijo -->
+    <app-hijo [valor]="valor"></app-hijo>
+</div>
+
+
+<!-- ----- sesion 15 ---- event binding -->
+<div class="container w-3/4 mx-auto bg-stone-50 mt-3
+text-center p-4 rounded">
+    <h1 class="pb-2 font-bold">{{titulo}}</h1>
+    <hr class="w-2/4 mx-auto bg-black-700">
+    <p class="pt-2 font-medium">Event binding</p>
+    <button (click)="ocultar()"
+    class="bg-red-400 py-2 px-2 mb-2 rounded text-white
+    hover:bg-red-700">{{cambiar}}</button>
+    <div>
+        <p class="p-4">{{visible}}</p>
+    </div>
+</div>
+
+<!-- two way binding -->
+<div class="container w-3/4 mx-auto bg-slate-300 mt-3
+p-4 text-center rounded">
+    <div>
+        <p class="font-semibold">Two Way Binding</p>
+        <!-- texto del textarea -->
+        <p class="text-justify px-2 py-2">{{ texto }}</p>
+        <div class="mt-3">
+          <textarea
+            [(ngModel)]="texto"
+            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="Escribe el texto para mostrar....">
+           </textarea>
+        </div>
+      </div>
+</div>
